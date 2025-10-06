@@ -1,2 +1,10 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h1>
+  Welcome,
+  <%= case Current.user.clearance_level
+        when 1 then "Cadet"
+        when 2 then "Lieutenant"
+        when 3 then "Colonel"
+        when 4 then "Manager"
+        when 5 then "Overseer"
+      end %>
+</h1>
