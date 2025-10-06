@@ -1,0 +1,27 @@
+<%= form_with(model: scp) do |form| %>
+  <% if scp.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(scp.errors.count, "error") %> prohibited this scp from being saved:</h2>
+
+      <ul>
+        <% scp.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :item_number, style: "display: block" %>
+    <%= form.number_field :item_number %>
+  </div>
+
+  <div>
+    <%= form.label :classification, style: "display: block" %>
+    <%= form.text_field :classification %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

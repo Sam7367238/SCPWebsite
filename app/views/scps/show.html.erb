@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @scp %>
+
+<div>
+  <%= link_to "Edit this SCP", edit_scp_path(@scp) %> |
+  <%= link_to "Back to SCPs", scps_path %>
+
+  <%= button_to "Destroy this SCP", @scp, method: :delete %>
+</div>

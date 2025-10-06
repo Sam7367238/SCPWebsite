@@ -1,0 +1,12 @@
+<% content_for :title, "Editing SCP" %>
+
+<h1>Editing scp</h1>
+
+<%= render "form", scp: @scp %>
+
+<br>
+
+<div>
+  <%= link_to "Show this SCP", @scp %> |
+  <%= link_to "Back to SCPs", scps_path %>
+</div>

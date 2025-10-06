@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "SCP" %>
+
+<h1>SCPs</h1>
+
+<div id="scps">
+  <% @scps.each do |scp| %>
+    <%= render scp %>
+    <p>
+      <%= link_to "Show this SCP", scp %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New SCP", new_scp_path %>
