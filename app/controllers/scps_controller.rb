@@ -1,5 +1,6 @@
 class ScpsController < ApplicationController
   before_action :set_scp, only: %i[ show edit update destroy ]
+  before_action :authorize_user, only: %i[ index show new create edit update destroy ]
 
   # GET /scps or /scps.json
   def index
@@ -66,5 +67,9 @@ class ScpsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def scp_params
       params.expect(scp: [ :item_number, :classification ])
+    end
+
+    def authorize_user
+      authorize! Scp
     end
 end
