@@ -23,13 +23,15 @@
   </head>
 
   <body>
-    <nav>
-      <%= link_to "Secure. Contain. Protect", root_path %>
+    <% if authenticated? %>
+      <nav>
+        <%= link_to "Secure. Contain. Protect", root_path %>
 
-      <% if Current.user.clearance_level >= 2 %>
-        <%= link_to "SCPs", scps_path %>
-      <% end %>
-    </nav>
+        <% if allowed_to?(:index?, Scp) %>
+          <%= link_to "SCPs", scps_path %>
+        <% end %>
+      </nav>
+    <% end %>
 
     <%= yield %>
   </body>
