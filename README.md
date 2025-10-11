@@ -1,2 +1,3 @@
 ### Biggest project yet...
 (Will be updated)
+Update...but in a bad way; Ruby on rails just has that learning curve, there aren't many effective educational places (documentation is just quite confusing sometimes) and I keep hitting into daily road-blocks unlike in Laravel. I just decided to move on.
